@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <div>头部</div>
+    <AppHeader/>
     <slot></slot>
     <div>底部</div>
   </div>
