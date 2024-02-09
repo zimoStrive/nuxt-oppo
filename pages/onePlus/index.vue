@@ -1,5 +1,5 @@
 <template>
-  <div class="intelligent">
+  <div class="one-plus">
     <div class="wrapper content">
       <Swiper :banners="data?.data.banners"></Swiper>
       <TabCategory :categorys="data?.data.categorys" @item-click="handleItemClick"></TabCategory>
@@ -11,13 +11,13 @@
 </template>
 
 <script lang="ts" setup>
-import { getHomeIntelligentInfo } from "@/service/home"
-const { data } = await getHomeIntelligentInfo()
+import { getHomeOnePlusInfo } from "@/service/home"
+const { data } = await getHomeOnePlusInfo()
 function handleItemClick(item: any) {}
 </script>
 
 <style lang="scss" scoped>
-.intelligent {
+.one-plus {
   background-color: $bgGrayColor;
 }
 </style>

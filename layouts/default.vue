@@ -3,7 +3,7 @@
     <AppHeader />
     <Navbar :navbars="navbars" />
     <slot></slot>
-    <div>底部</div>
+    <AppFooter></AppFooter>
   </div>
 </template>
 

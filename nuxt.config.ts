@@ -1,7 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import ElementPlus from "unplugin-element-plus/vite"
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/global.scss", "~/assets/css/iconfont.css"],
+  build: {
+    // babel转义
+    transpile: ["element-plus/es"],
+  },
   vite: {
     css: {
       preprocessorOptions: {
@@ -10,6 +15,8 @@ export default defineNuxtConfig({
         },
       },
     },
+    // 实现样式导入
+    plugins: [ElementPlus()],
   },
   // 注册了一个 pinia 模块(自动导包)
   modules: [
